@@ -1,0 +1,265 @@
+/* Reseteo básico y tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    background-color: #f8f8f8; /* color de fondo sutil */
+  }
+  
+  /* ----- SIDEBAR ----- */
+  .sidebar {
+    width: 80px; /* Ajusta para que inicialmente solo se vea la parte de iconos */
+    border-right: 2px solid #000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 1em 0; /* Espaciado vertical */
+    position: relative; /* Para poder controlar su 'z-index' */
+    background-color: #fff;
+    z-index: 1000; /* <--- AÑADIDO: sidebar por encima */
+  }
+  
+  .sidebar .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  
+  .sidebar .logo img {
+    max-height: 60px;
+    width: auto;
+  }
+  
+  .sidebar nav ul li {
+    display: flex;
+    position: relative;      /* Contenedor "padre" */
+    width: 30px;            /* Ancho fijo para evitar que el icono se mueva */
+    height: 30px;           /* Alto fijo */
+    margin: 3em auto;      /* Espaciado vertical */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .sidebar nav ul li:hover {
+    background-color: #f0f0f0; /* Color de fondo suave al hacer hover */
+  }
+  
+  /* El icono (imagen) */
+  .sidebar nav ul li img.icon {
+    display: flex;
+    position: absolute;
+    transform: translate(-50%, -50%); 
+    /* De esta forma, permanece siempre centrado */
+  }
+  
+  /* El texto (p) que aparece encima */
+  .sidebar nav ul li p {
+    display: none;
+    transform: translate(-50%, -50%); 
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    margin: 0 3em;
+    border-radius: 4px;
+    pointer-events: none;      /* Para que no interfiera el cursor cuando está oculto */
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  /* Al hacer hover en el p (o en todo el li) para mostrar el texto */
+  .sidebar nav ul li:hover p {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  /* ----- MAIN CONTENT ----- */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    z-index: 1; 
+  }
+  
+  /* ----- HEADER ----- */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+  }
+  
+  .filter-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .filter-input button {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .filter-input button img {
+    margin-right: 5px;
+  }
+  
+  .filter-input input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .user-options {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* Botones "Guardados" y "Crear" */
+  .save-button, 
+  .create-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .save-button {
+    background: #333;
+    color: #fff;
+  }
+  
+  .create-button {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  /* ----- USER MENU (desplegable) ----- */
+  .user-menu {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Imagínate aquí la foto de perfil */
+  .user-menu img {
+    width: 32px; 
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* El submenú que se despliega */
+  .user-menu ul {
+    position: absolute;
+    top: 45px; /* Ajusta según la altura del user-menu */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    list-style: none;
+    min-width: 150px;
+    padding: 5px 0;
+    display: none; /* Oculto por defecto, se muestra con JS o hover */
+  }
+  
+  .user-menu ul li {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .user-menu ul li:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .user-menu ul li img {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Muestra el desplegable, por ejemplo usando una clase .active en .user-menu */
+  .user-menu.active ul {
+    display: block;
+  }
+  
+  /* ----- GALLERY ----- */
+  /* Queremos 4 columnas fijas */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Tarjeta individual */
+  .card {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto; /* Jugamos con la altura dejando que se adapte al ancho */
+    display: block;
+  }
+  
+  /* Botón "Guardar" dentro de la imagen */
+  .save-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  /* Botón flotante ejemplo (si lo necesitas) */
+  .floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background: #28a745;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
