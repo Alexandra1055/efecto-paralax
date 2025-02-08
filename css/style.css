@@ -13,16 +13,10 @@ html, body {
 
 /* 
   CONTENEDOR PRINCIPAL:
-  Envuelve todo el body (header, main, footer y .paralax).
+  Envuelve todo el body (header, main, footer).
   Con overflow: hidden, los elementos que se salgan por arriba/abajo
   no se verán (no habrá “desbordamiento”). 
 */
-.page-wrapper {
-  position: relative;
-  /* Ajusta según prefieras “100%” o “100vh” */
-  min-height: 100vh;
-  overflow: hidden;
-}
 
 /* MAIN */
 main {
@@ -32,14 +26,13 @@ main {
   justify-content: space-around;
   padding: 1em;
   margin-top: 50px; 
-  margin-right: 15em;
 }
 
 /* SECCIÓN INICIO SESIÓN */
 .inicio-sesion {
   display: flex;
   flex-direction: column;
-  flex-basis: 25%; /* o width: 30% */
+  width: 30% ;
   margin-top: 5em;
 }
 .inicio-sesion h1 {

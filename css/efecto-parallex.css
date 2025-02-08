@@ -1,68 +1,106 @@
-/* CAPA “PARALLAX”: ocupa todo el contenedor, queda por detrás */
-.paralax {
-    position: absolute; 
+/* Contenedor general del parallax (duplica el contenido verticalmente) */
+.parallax-wrapper {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 0;      /* Detrás del header/main/footer */
-    overflow: hidden; /* Asegura que nada salga de esta capa */
+    /* Dos bloques de 100vh cada uno = 200vh en total */
+    height: 200vh;
+    overflow: hidden;
+    /* Se anima desplazándose hacia arriba el alto de un bloque (100vh) */
+    animation: scrollCycle 30s linear infinite;
   }
   
-  /* ANIMACIÓN CONTINUA: 
-     Desplaza cada imagen de arriba (fuera de la pantalla) a abajo (fuera).
-     Repite en bucle.
-  */
-  @keyframes floatCycle {
-    0%   { transform: translateY(-200%); }
-    100% { transform: translateY(200%); }
+  /* Cada bloque de contenido ocupa el 100% del viewport */
+  .parallax-content {
+    position: relative;
+    width: 80%;
+    height: 100vh;
   }
   
-  /* Clase base para todas las imágenes flotantes */
+  /* Las imágenes se posicionan de forma absoluta dentro de su bloque */
   .floater {
-    position: absolute;  /* Para que top/left y transform se apliquen correctamente */
+    position: absolute;
     border-radius: 15px;
-    animation: floatCycle 30s linear infinite; /* Ajusta duración y timing al gusto */
+    box-shadow: 0 0 10px rgba(8, 8, 8, 0.856);
   }
   
-  /* Control de profundidad (z-index) + opacidad + tamaño */
+  /* Clases para simular profundidad (z-index), opacidad y escalado */
   .behind {
     z-index: -6; 
     opacity: 0.4; 
-    transform: scale(0.8);
+    transform: scale(1);
+    animation: scrollCycle 25s linear infinite; /* Más rápido */
   }
   .middel {
     z-index: -3;
-    opacity: 0.7;
-    transform: scale(1);
+    opacity: 0.9;
+    transform: scale(2);
+    animation: scrollCycle 50s linear infinite; /* Velocidad media */
   }
   .front {
     z-index: -1;
-    opacity: 1;
-    transform: scale(2);
+    opacity: 2;
+    transform: scale(3);
+    animation: scrollCycle 60s linear infinite; /* Más lento */
+  }
+
+  /* Animación para las imágenes más rápidas (.behind) */
+@keyframes scrollFast {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-300px);
+    }
   }
   
-  /* Tamaños */
+  /* Animación para las imágenes de velocidad media (.middel) */
+  @keyframes scrollMedium {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-250px);
+    }
+  }
+
+   /* Animación para las imágenes más lentas (.front) */
+   @keyframes scrollSlow {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-150px);
+    }
+  }
+
+  /* Tamaños de las imágenes */
   .small {
     width: 10%;
     height: auto;
-    max-width: 120px; /* opcional */
+    max-width: 120px;
   }
-  
   .medium {
     width: 20%;
     height: auto;
     max-width: 170px;
   }
-  
   .big {
     width: 30%;
     height: auto;
     max-width: 250px;
   }
   
-  .galeria {
-    flex: 1;
-    margin-right: 2em;
+  /* Animación del contenedor parallax:
+     Se desplaza de 0 a -100vh, de modo que al terminar un bloque
+     el segundo (duplicado) toma su lugar y el ciclo se reinicia sin saltos.
+  */
+  @keyframes scrollCycle {
+    0% {
+      transform: translateY(-100vh);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
-  
