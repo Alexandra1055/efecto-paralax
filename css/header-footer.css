@@ -1,0 +1,114 @@
+/* HEADER */
+header {
+    background-color:white ;
+    position: relative;
+    z-index: 999; /* Header por encima de todo */
+  }
+  header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.5em;
+  }
+  .logo img {
+    max-height: 100px;
+  }
+  .header-nav ul {
+    list-style: none;
+    display: flex;
+  }
+  .header-nav li {
+    margin-left: 1em;
+  }
+  .header-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  .header-nav a:hover {
+    color: #38c785;
+  }
+  .user-actions {
+    display: flex;
+    gap: 10px;
+  }
+  .register,
+  .login {
+    padding: 0.5em 2em;
+    text-decoration: none;
+    border-radius: 3em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .register {
+    background-color: #eeeeee;
+    color: #292929;
+  }
+  .login {
+    background-color: #292929;
+    color: #eeeeee;
+  }
+  .register:hover {
+    background-color: #e9ecef;
+    color: #38c785;
+    border-color: #38c785;
+  }
+  .login:hover {
+    background-color: #38c785;
+  }
+
+  /* FOOTER */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 1em;
+    z-index: 999; /* Visible por encima de la capa parallax */
+    height: 270px;
+  }
+  footer .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer-nav ul,
+  .info ul {
+    list-style: none;
+  }
+  .footer-nav li,
+  .info li {
+    margin-bottom: 10px;
+  }
+  .footer-nav a,
+  .info a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: #292929;
+  }
+  .footer-nav a:hover,
+  .info a:hover {
+    color: #38c785;
+  }
+  footer .logo img {
+    max-height: 90px;
+  }
+  .footer-nav ul {
+    border-left: 3px double #292929;
+    padding-left: 2em;
+  }
+  footer .info {
+    border-right: 3px double #292929;
+    padding-right: 2em;
+    text-align: right;
+  }
+  footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+  }
+  footer .redes-sociales img {
+    max-height: 30px;
+    margin: 1em;
+  }
+  
