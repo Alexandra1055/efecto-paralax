@@ -16,7 +16,7 @@
   /* ----- SIDEBAR ----- */
   .sidebar {
     width: 80px; /* Ajusta para que inicialmente solo se vea la parte de iconos */
-    border-right: 2px solid #000;
+    border-right: 2px solid #f3f7fa;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     padding: 1em 0; /* Espaciado vertical */
     position: relative; /* Para poder controlar su 'z-index' */
@@ -27,7 +27,7 @@
   .sidebar .logo {
     display: flex;
     justify-content: center;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
   }
   
   .sidebar .logo img {
@@ -37,46 +37,47 @@
   
   .sidebar nav ul li {
     display: flex;
-    position: relative;      /* Contenedor "padre" */
-    width: 30px;            /* Ancho fijo para evitar que el icono se mueva */
-    height: 30px;           /* Alto fijo */
-    margin: 3em auto;      /* Espaciado vertical */
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.2s ease-in-out;
+    justify-content: center;
+    padding:1em 1.2em 1em 1.2em;
+    margin: 0.5em;
   }
   
-  .sidebar nav ul li:hover {
-    background-color: #f0f0f0; /* Color de fondo suave al hacer hover */
-  }
   
-  /* El icono (imagen) */
-  .sidebar nav ul li img.icon {
-    display: flex;
-    position: absolute;
-    transform: translate(-50%, -50%); 
-    /* De esta forma, permanece siempre centrado */
-  }
+ .sidebar li img {
+    width: auto;
+    height: 2em;
+    filter: invert(30%) sepia(5%) saturate(18%) hue-rotate(13deg) brightness(100%) contrast(91%);
+ }
+
+ .sidebar li img:hover {
+  filter: invert(55%) sepia(17%) saturate(4696%) hue-rotate(134deg) brightness(92%) contrast(95%);
+}
   
+ .sidebar ul li:hover {
+  background-color: #f7f7f7; /* Color de fondo suave al hacer hover */
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.212);
+
+}
+
+
   /* El texto (p) que aparece encima */
   .sidebar nav ul li p {
     display: none;
-    transform: translate(-50%, -50%); 
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    margin: 0 3em;
-    border-radius: 4px;
-    pointer-events: none;      /* Para que no interfiera el cursor cuando está oculto */
-    transition: opacity 0.2s ease-in-out;
-  }
-  
+    position: fixed;
+    background-color: #f7f7f7;
+  }  
   /* Al hacer hover en el p (o en todo el li) para mostrar el texto */
   .sidebar nav ul li:hover p {
-    display: flex;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 5px 10px;
+    display:flex;
+    border: 1px solid #f7f7f7;
+    border-radius: 2em;
+    padding: 1em 1em;
+    color: #333;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.212);
+    transform: translate(100%, -10px); /* Mueve ligeramente hacia arriba al hacer hover */
   }
+
   
   /* ----- MAIN CONTENT ----- */
   .main-content {
