@@ -1,159 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Galería de Moda</title>
   <!-- Vinculamos el CSS -->
   <link rel="stylesheet" href="css/styleE.css">
+  <link rel="stylesheet" href="css/galeria-masonry.css">
 </head>
 
 <body>
-  <div class="sidebar">
-    <div class="logo"><img src="multimedia/st-isotipo-temporal.png" alt="ST"></div>
-    <nav>
-      <ul>
-        <li class="icon"><img src="multimedia/explore.svg" alt="">
-          <p>Explorar</p>
-        </li>
-        <li class="icon"><img src="multimedia/groups.svg" alt="">
-          <p>Diseñadores</p>
-        </li>
-        <li class="icon"><img src="multimedia/import.svg" alt="">
-          <p>Revista</p>
-        </li>
-        <li class="icon"><img src="multimedia/school.svg" alt="">
-          <p>Escuelas</p>
-        </li>
-        <li class="icon"><img src="multimedia/work.svg" alt="">
-          <p>Ofertas</p>
-        </li>
-        <li class="icon"><img src="multimedia/description.svg" alt="">
-          <p>Blog</p>
-        </li>
-        <li class="icon"><img src="multimedia/info.svg" alt="">
-          <p>About</p>
-        </li>
-      </ul>
-    </nav>
-  </div>
-
-  <div class="main-content">
-    <div class="header">
-      <div class="filter-input">
-        <button class="filtrar">
-          <img src="multimedia/filtros.svg" alt="">
-          <input type="text" placeholder="Filtrar">
-        </button>
-        <button class="buscar">
-          <img src="multimedia/search.svg" alt="">
-          <input type="text" placeholder="Buscar">
-        </button>
+  <header>
+    <div class="sidebar">
+      <div class="logo">
+        <img src="multimedia/st-isotipo-temporal.png" alt="ST">
+        <button class="menu-toggle"><span></span><span></span><span></span></button>
       </div>
-      <div class="options">
-        <button class="save-button"><img src="multimedia/bookmark.svg" alt="">guardados</button>
-        <button class="create-button"><img src="multimedia/add.svg" alt="">crear</button>
-        <div class="user-options">
-          <button class="profile-button">
-            <div class="profile-pic">
-              <img src="multimedia/profile-placeholder.jpg" alt="Foto de perfil">
-            </div>
-          </button>
-          <div class="user-menu">
-            <ul>
-              <li class="icon"><img src="multimedia/person.svg" alt="">
-                <p>Mi perfil</p>
-              </li>
-              <li class="icon"><img src="multimedia/groups.svg" alt="">
-                <p>Mis creativos</p>
-              </li>
-              <li class="icon"><img src="multimedia/edit.svg" alt="">
-                <p>Editar perfil</p>
-              </li>
-              <li class="icon"><img src="multimedia/work.svg" alt="">
-                <p>Mis ofertas</p>
-              </li>
-              <li class="icon"><img src="multimedia/settings.svg" alt="">
-                <p>Configuración</p>
-              </li>
-              <li class="icon"><img src="multimedia/exit.svg" alt="">
-                <p>Cerrar sesión</p>
-              </li>
-            </ul>
+      <nav class="menu-sidebar">
+        <ul>
+          <li class="icon"><img src="multimedia/explore.svg" alt=""><p>Explorar</p></li>
+          <li class="icon"><img src="multimedia/groups.svg" alt=""><p>Diseñadores</p></li>
+          <li class="icon"><img src="multimedia/import.svg" alt=""><p>Revista</p></li>
+          <li class="icon"><img src="multimedia/school.svg" alt=""><p>Escuelas</p></li>
+          <li class="icon"><img src="multimedia/work.svg" alt=""><p>Ofertas</p></li>
+          <li class="icon"><img src="multimedia/description.svg" alt=""><p>Blog</p></li>
+          <li class="icon"><img src="multimedia/info.svg" alt=""><p>About</p></li>
+        </ul>
+      </nav>
+    </div>
+</header>
+<main>
+
+  <div class="header">
+    <div class="filter-input">
+      <button class="filtrar">
+        <img src="multimedia/filtros.svg" alt="">
+        <input type="text" placeholder="Filtrar">
+      </button>
+      <button class="buscar">
+        <img src="multimedia/search.svg" alt="">
+        <input type="text" placeholder="Buscar">
+      </button>
+    </div>
+    <div class="options">
+      <button class="save-button"><img src="multimedia/bookmark.svg" alt="">guardados</button>
+      <button class="create-button"><img src="multimedia/add.svg" alt="">crear</button>
+      <div class="user-options">
+        <button class="profile-button">
+          <div class="profile-pic">
+            <img src="multimedia/profile-placeholder.jpg" alt="Foto de perfil">
           </div>
+        </button>
+        <div class="user-menu">
+          <ul>
+            <li class="icon"><img src="multimedia/person.svg" alt="">
+              <p>Mi perfil</p>
+            </li>
+            <li class="icon"><img src="multimedia/groups.svg" alt="">
+              <p>Mis creativos</p>
+            </li>
+            <li class="icon"><img src="multimedia/edit.svg" alt="">
+              <p>Editar perfil</p>
+            </li>
+            <li class="icon"><img src="multimedia/work.svg" alt="">
+              <p>Mis ofertas</p>
+            </li>
+            <li class="icon"><img src="multimedia/settings.svg" alt="">
+              <p>Configuración</p>
+            </li>
+            <li class="icon"><img src="multimedia/exit.svg" alt="">
+              <p>Cerrar sesión</p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
+  </div>
 
+  <div class="main-content">
     <!-- GALERÍA -->
-    <div class="gallery">
-      <div class="small">
+
+    <div class="mansory-gallery">
+      <div class="masonry-item">
         <img src="multimedia/395e95bfd8bc0ba3148bc98e613aa3d6.jpg" alt="Moda 1">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="small">
+      <div class="masonry-item">
         <img src="multimedia/6284ce8b590b39c85a54d5e69435b1a4.jpg" alt="Moda 2">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="big">
+      <div class="masonry-item">
         <img src="multimedia/d5c32f97c015f7b4f6cdb81ebd9fb1e4.jpg" alt="Moda 3">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="small">
+      <div class="masonry-item">
         <img src="multimedia/Fotografo-moda-profesional-madrid-barcelona-fashion-look-book.jpg" alt="Moda 4">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="small">
+      <div class="masonry-item">
         <img src="multimedia/fotografo-moda-profesional.jpg" alt="Moda 5">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="medium">
+      <div class="masonry-item">
         <img src="multimedia/395e95bfd8bc0ba3148bc98e613aa3d6.jpg" alt="Moda 1">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="small">
+      <div class="masonry-item">
         <img src="multimedia/6284ce8b590b39c85a54d5e69435b1a4.jpg" alt="Moda 2">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="small">
+      <div class="masonry-item">
         <img src="multimedia/d5c32f97c015f7b4f6cdb81ebd9fb1e4.jpg" alt="Moda 3">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="big">
+      <div class="masonry-item">
         <img src="multimedia/Fotografo-moda-profesional-madrid-barcelona-fashion-look-book.jpg" alt="Moda 4">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="medium">
+      <div class="masonry-item">
         <img src="multimedia/fotografo-moda-profesional.jpg" alt="Moda 5">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="small">
+      <div class="masonry-item">
         <img src="multimedia/395e95bfd8bc0ba3148bc98e613aa3d6.jpg" alt="Moda 1">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="big">
+      <div class="masonry-item">
         <img src="multimedia/6284ce8b590b39c85a54d5e69435b1a4.jpg" alt="Moda 2">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="small">
+      <div class="masonry-item">
         <img src="multimedia/d5c32f97c015f7b4f6cdb81ebd9fb1e4.jpg" alt="Moda 3">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="small">
+      <div class="masonry-item">
         <img src="multimedia/Fotografo-moda-profesional-madrid-barcelona-fashion-look-book.jpg" alt="Moda 4">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="medium">
+      <div class="masonry-item">
         <img src="multimedia/fotografo-moda-profesional.jpg" alt="Moda 5">
         <button class="save-tag">Guardar</button>
       </div>
-      <div class="small">
+      <div class="masonry-item">
         <img src="multimedia/395e95bfd8bc0ba3148bc98e613aa3d6.jpg" alt="Moda 1">
         <button class="save-tag">Guardar</button>
       </div>
     </div>
   </div>
-
+</main>
   <!-- JS para el menú del perfil -->
   <script>
     const profileButton = document.querySelector('.profile-button');
@@ -170,5 +165,7 @@
       }
     });
   </script>
+  
 </body>
+
 </html>
