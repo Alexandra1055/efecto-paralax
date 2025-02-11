@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Galería de Moda</title>
+  <!-- Vinculamos el CSS -->
   <link rel="stylesheet" href="css/styleE.css">
 </head>
 
@@ -14,7 +14,7 @@
     <nav>
       <ul>
         <li class="icon"><img src="multimedia/explore.svg" alt="">
-          <p> Explorar</p>
+          <p>Explorar</p>
         </li>
         <li class="icon"><img src="multimedia/groups.svg" alt="">
           <p>Diseñadores</p>
@@ -36,14 +36,19 @@
         </li>
       </ul>
     </nav>
-
   </div>
+
   <div class="main-content">
     <div class="header">
       <div class="filter-input">
-        <button class="filtrar"><img src="multimedia/filtros.svg" alt=""><input type="text"
-            placeholder="Filtrar"></button>
-        <button class="buscar"><img src="multimedia/search.svg" alt=""><input type="text" placeholder="Buscar"></button>
+        <button class="filtrar">
+          <img src="multimedia/filtros.svg" alt="">
+          <input type="text" placeholder="Filtrar">
+        </button>
+        <button class="buscar">
+          <img src="multimedia/search.svg" alt="">
+          <input type="text" placeholder="Buscar">
+        </button>
       </div>
       <div class="options">
         <button class="save-button"><img src="multimedia/bookmark.svg" alt="">guardados</button>
@@ -56,67 +61,114 @@
           </button>
           <div class="user-menu">
             <ul>
-              <li class="icon"><img src="multimedia/person.svg" alt=""><p>Mi perfil</p></li>
-              <li class="icon"><img src="multimedia/groups.svg" alt=""><p>Mis creativos</p></li>
-              <li class="icon"><img src="multimedia/edit.svg" alt=""><p>Editar perfil</p></li>
-              <li class="icon"><img src="multimedia/work.svg" alt=""><p>Mis ofertas</p></li>
-              <li class="icon"><img src="multimedia/settings.svg" alt=""><p>Configuración</p></li>
-              <li class="icon"><img src="multimedia/exit.svg" alt=""><p>Cerrar sesión</p></li>
+              <li class="icon"><img src="multimedia/person.svg" alt="">
+                <p>Mi perfil</p>
+              </li>
+              <li class="icon"><img src="multimedia/groups.svg" alt="">
+                <p>Mis creativos</p>
+              </li>
+              <li class="icon"><img src="multimedia/edit.svg" alt="">
+                <p>Editar perfil</p>
+              </li>
+              <li class="icon"><img src="multimedia/work.svg" alt="">
+                <p>Mis ofertas</p>
+              </li>
+              <li class="icon"><img src="multimedia/settings.svg" alt="">
+                <p>Configuración</p>
+              </li>
+              <li class="icon"><img src="multimedia/exit.svg" alt="">
+                <p>Cerrar sesión</p>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-   
+
+    <!-- GALERÍA -->
     <div class="gallery">
-      <div class="card"><img src="multimedia/395e95bfd8bc0ba3148bc98e613aa3d6.jpg" alt="Moda 1"><button
-          class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/6284ce8b590b39c85a54d5e69435b1a4.jpg" alt="Moda 2"><button
-          class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/d5c32f97c015f7b4f6cdb81ebd9fb1e4.jpg" alt="Moda 3"><button
-          class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/Fotografo-moda-profesional-madrid-barcelona-fashion-look-book.jpg"
-          alt="Moda 4"><button class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/fotografo-moda-profesional.jpg" alt="Moda 5"><button
-          class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/395e95bfd8bc0ba3148bc98e613aa3d6.jpg" alt="Moda 1"><button
-          class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/6284ce8b590b39c85a54d5e69435b1a4.jpg" alt="Moda 2"><button
-          class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/d5c32f97c015f7b4f6cdb81ebd9fb1e4.jpg" alt="Moda 3"><button
-          class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/Fotografo-moda-profesional-madrid-barcelona-fashion-look-book.jpg"
-          alt="Moda 4"><button class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/fotografo-moda-profesional.jpg" alt="Moda 5"><button
-          class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/395e95bfd8bc0ba3148bc98e613aa3d6.jpg" alt="Moda 1"><button
-          class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/6284ce8b590b39c85a54d5e69435b1a4.jpg" alt="Moda 2"><button
-          class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/d5c32f97c015f7b4f6cdb81ebd9fb1e4.jpg" alt="Moda 3"><button
-          class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/Fotografo-moda-profesional-madrid-barcelona-fashion-look-book.jpg"
-          alt="Moda 4"><button class="save-tag">Guardar</button></div>
-      <div class="card"><img src="multimedia/fotografo-moda-profesional.jpg" alt="Moda 5"><button
-          class="save-tag">Guardar</button></div>
+      <div class="small">
+        <img src="multimedia/395e95bfd8bc0ba3148bc98e613aa3d6.jpg" alt="Moda 1">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="small">
+        <img src="multimedia/6284ce8b590b39c85a54d5e69435b1a4.jpg" alt="Moda 2">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="big">
+        <img src="multimedia/d5c32f97c015f7b4f6cdb81ebd9fb1e4.jpg" alt="Moda 3">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="small">
+        <img src="multimedia/Fotografo-moda-profesional-madrid-barcelona-fashion-look-book.jpg" alt="Moda 4">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="small">
+        <img src="multimedia/fotografo-moda-profesional.jpg" alt="Moda 5">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="medium">
+        <img src="multimedia/395e95bfd8bc0ba3148bc98e613aa3d6.jpg" alt="Moda 1">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="small">
+        <img src="multimedia/6284ce8b590b39c85a54d5e69435b1a4.jpg" alt="Moda 2">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="small">
+        <img src="multimedia/d5c32f97c015f7b4f6cdb81ebd9fb1e4.jpg" alt="Moda 3">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="big">
+        <img src="multimedia/Fotografo-moda-profesional-madrid-barcelona-fashion-look-book.jpg" alt="Moda 4">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="medium">
+        <img src="multimedia/fotografo-moda-profesional.jpg" alt="Moda 5">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="small">
+        <img src="multimedia/395e95bfd8bc0ba3148bc98e613aa3d6.jpg" alt="Moda 1">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="big">
+        <img src="multimedia/6284ce8b590b39c85a54d5e69435b1a4.jpg" alt="Moda 2">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="small">
+        <img src="multimedia/d5c32f97c015f7b4f6cdb81ebd9fb1e4.jpg" alt="Moda 3">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="small">
+        <img src="multimedia/Fotografo-moda-profesional-madrid-barcelona-fashion-look-book.jpg" alt="Moda 4">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="medium">
+        <img src="multimedia/fotografo-moda-profesional.jpg" alt="Moda 5">
+        <button class="save-tag">Guardar</button>
+      </div>
+      <div class="small">
+        <img src="multimedia/395e95bfd8bc0ba3148bc98e613aa3d6.jpg" alt="Moda 1">
+        <button class="save-tag">Guardar</button>
+      </div>
     </div>
   </div>
 
+  <!-- JS para el menú del perfil -->
   <script>
     const profileButton = document.querySelector('.profile-button');
     const userMenu = document.querySelector('.user-menu');
 
-    profileButton.addEventListener('click', function(event) {
-      event.stopPropagation();  // Evita que el clic cierre el menú inmediatamente
+    profileButton.addEventListener('click', function (event) {
+      event.stopPropagation();
       userMenu.classList.toggle('active');
     });
 
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
       if (!userMenu.contains(event.target) && !profileButton.contains(event.target)) {
         userMenu.classList.remove('active');
       }
     });
   </script>
 </body>
-
 </html>
