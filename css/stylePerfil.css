@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 16px;
+}
+.perfil {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+/* Header */
+.perfil__header {
+    padding: 16px 0;
+}
+
+.perfil__volver {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Contenido */
+.perfil__contenido {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+}
+
+/* Imágenes */
+.perfil__imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.perfil__imagen-principal {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.perfil__galeria {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+    flex-wrap: nowrap;
+    height: auto;
+}
+
+.perfil__miniatura {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+/* Info */
+.perfil__info {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.perfil__usuario {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    padding: 0.2em 1em;
+    background-color: #ececec;
+    border-radius: 7px;
+}
+
+.perfil__avatar {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+}
+
+/*Presentación, engloba publicacion y personas*/
+
+.perfil__presentacion{
+    padding: 2em 1em;
+    background-color: #ececec;
+    border-radius: 7px;
+}
+
+
+/* Publicación */
+.publicacion__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    margin-top: 2em;
+}
+
+.publicacion__descripcion {
+    font-size: 1rem;
+    margin-bottom: 2em;
+}
+
+/* Personas */
+.personas__lista {
+    list-style: none;
+}
+
+.personas__item {
+    margin: 4px;
+}
+
+.personas__enlace {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+/* Etiquetas */
+.perfil__etiquetas{
+    margin: 0.5em;
+}
+.etiquetas__lista {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.7em;
+}
+
+.etiqueta {
+    color: black;
+    padding: 0.5em 1em;
+    background-color: #ececec;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    margin: 0.5em;
+}
+
+/* Media Queries */
+@media (min-width: 720px) {
+    .perfil__contenido {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .perfil__imagenes {
+        align-items: center;
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+    .perfil{
+        max-width: 1200px;
+    }
+
+    .perfil__contenido {
+        grid-template-columns: 4fr 1fr;
+        gap: 12em;
+    }
+}
