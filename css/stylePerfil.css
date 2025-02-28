@@ -43,12 +43,14 @@ body {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    position: relative;
 }
 
 .perfil__imagen-principal {
     width: 300px;
     height: auto;
     border-radius: 8px;
+    position: relative;
 }
 
 .perfil__galeria {
@@ -64,7 +66,69 @@ body {
     height: 100px;
     border-radius: 8px;
 }
+/* Botones de navegación */
+.anterior {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
+.anterior img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Flecha izquierda a la izquierda de la imagen */
+.anterior:first-of-type {
+   
+}
+
+/* Flecha derecha a la derecha de la imagen */
+.anterior:last-of-type {
+    
+}
+
+/* Botones de guardar y compartir */
+.options {
+    position: absolute;
+    flex-direction: column;
+    top: 10px;
+    right: 52px;
+    display: flex;
+    gap: 8px;
+}
+
+.save-button{
+    border-radius: 17px;
+    background: rgb(207, 207, 207);
+    padding: 0.2em 0.7em;
+    filter: invert(1);
+    border: none;
+    cursor: pointer;
+}
+.compartir {
+    background-color: #ececec;
+    border-radius: 50%;
+    padding: 0.5em;
+    border: none;
+    cursor: pointer;
+}
+
+.save-button img,
+.compartir img {
+    width: 24px;
+    height: 24px;
+}
+.save-button img:hover {
+   filter: invert(50%) sepia(9%) saturate(150%) hue-rotate(120deg) brightness(90%) contrast(20%);
+}
+
+.compartir img:hover {
+    filter: invert(55%) sepia(17%) saturate(4696%) hue-rotate(134deg) brightness(92%) contrast(95%);
+  }
 /* Info */
 .perfil__info {
     display: flex;
@@ -150,6 +214,12 @@ body {
     .perfil__imagenes {
         align-items: center;
     }
+    .options {
+        top: 10px;
+        right: 100px;
+        display: flex;
+        gap: 8px;
+    }
 
 }
 
@@ -162,5 +232,12 @@ body {
     .perfil__contenido {
         grid-template-columns: 4fr 1fr;
         gap: 12em;
+    }
+
+    .options {
+        top: 10px;
+        right: 210px;
+        display: flex;
+        gap: 8px;
     }
 }
