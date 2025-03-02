@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,6 +11,7 @@ body {
     color: #333;
     padding: 16px;
 }
+
 .perfil {
     max-width: 900px;
     width: 100%;
@@ -28,6 +29,15 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.perfil__volver img{
+    width: 25px;
+    height: 30px;
+    cursor: pointer;
 }
 
 /* Contenido */
@@ -66,6 +76,7 @@ body {
     height: 100px;
     border-radius: 8px;
 }
+
 /* Botones de navegación */
 .anterior {
     position: absolute;
@@ -82,39 +93,54 @@ body {
 }
 
 /* Flecha izquierda a la izquierda de la imagen */
-.anterior:first-of-type {
-   
+.anterior,
+.siguiente {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-100%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
 }
 
-/* Flecha derecha a la derecha de la imagen */
-.anterior:last-of-type {
-    
+.anterior {
+    left: -12px;
 }
+
+.siguiente {
+    right: -12px;
+}
+
+.anterior img,
+.siguiente img {
+    width: 32px;
+    height: 32px;
+    filter: invert(50%);
+}
+
 
 /* Botones de guardar y compartir */
 .options {
     position: absolute;
-    flex-direction: column;
     top: 10px;
-    right: 52px;
+    right: 50px;
     display: flex;
+    flex-direction: column;
     gap: 8px;
+    z-index: 10;
 }
 
-.save-button{
-    border-radius: 17px;
-    background: rgb(207, 207, 207);
-    padding: 0.2em 0.7em;
-    filter: invert(1);
-    border: none;
-    cursor: pointer;
-}
+.save-button,
 .compartir {
-    background-color: #ececec;
     border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
     padding: 0.5em;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .save-button img,
@@ -122,13 +148,25 @@ body {
     width: 24px;
     height: 24px;
 }
+
+.save-button {
+    filter: invert(10);
+    background: #dfdede;
+}
+
+.save-button:hover,
+.compartir:hover {
+    background: #535353;
+}
+
 .save-button img:hover {
-   filter: invert(50%) sepia(9%) saturate(150%) hue-rotate(120deg) brightness(90%) contrast(20%);
+    filter: invert(2000%) sepia(17%) saturate(96%) hue-rotate(134deg) brightness(92%) contrast(95%);
 }
 
 .compartir img:hover {
     filter: invert(55%) sepia(17%) saturate(4696%) hue-rotate(134deg) brightness(92%) contrast(95%);
-  }
+}
+
 /* Info */
 .perfil__info {
     display: flex;
@@ -153,7 +191,7 @@ body {
 
 /*Presentación, engloba publicacion y personas*/
 
-.perfil__presentacion{
+.perfil__presentacion {
     padding: 2em 1em;
     background-color: #ececec;
     border-radius: 7px;
@@ -187,9 +225,10 @@ body {
 }
 
 /* Etiquetas */
-.perfil__etiquetas{
+.perfil__etiquetas {
     margin: 0.5em;
 }
+
 .etiquetas__lista {
     display: flex;
     flex-wrap: wrap;
@@ -214,9 +253,10 @@ body {
     .perfil__imagenes {
         align-items: center;
     }
+
     .options {
         top: 10px;
-        right: 100px;
+        right: 5em;
         display: flex;
         gap: 8px;
     }
@@ -225,13 +265,26 @@ body {
 
 
 @media (min-width: 1200px) {
-    .perfil{
+    .perfil {
         max-width: 1200px;
     }
 
     .perfil__contenido {
         grid-template-columns: 4fr 1fr;
         gap: 12em;
+    }
+
+    .anterior,
+    .siguiente {
+        top: 30%;
+    }
+
+    .anterior {
+        left: 100px;
+    }
+
+    .siguiente {
+        right: 100px;
     }
 
     .options {
